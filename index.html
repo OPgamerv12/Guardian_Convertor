@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guardian Guild - Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚔️ Guardian Guild ⚔️</h1>
+    <p>Minecraft Currency Converter</p>
+  </header>
+
+  <div class="container">
+    <div class="converter-box">
+      <h2>💎 Convert Your Currency</h2>
+
+      <input type="number" id="amount" placeholder="Enter amount">
+
+      <!-- From Section -->
+      <div class="input-group">
+        <label>From:</label>
+        <select id="fromCurrency" onchange="updateFromImage()">
+          <option value="diamond">Diamond</option>
+          <option value="gold">Gold</option>
+          <option value="emerald">Emerald</option>
+          <option value="netherite">Netherite</option>
+        </select>
+        <select id="fromUnit" onchange="updateFromImage()">
+          <option value="ingot">Ingot</option>
+          <option value="block">Block</option>
+        </select>
+        <div id="fromImageContainer">
+          <img id="fromImage" src="images/Diamond.png" width="50">
+        </div>
+      </div>
+
+      <!-- To Section -->
+      <div class="input-group">
+        <label>To:</label>
+        <select id="toCurrency" onchange="updateToImage()">
+          <option value="diamond">Diamond</option>
+          <option value="gold">Gold</option>
+          <option value="emerald">Emerald</option>
+          <option value="netherite">Netherite</option>
+        </select>
+        <select id="toUnit" onchange="updateToImage()">
+          <option value="ingot">Ingot</option>
+          <option value="block">Block</option>
+        </select>
+        <div id="toImageContainer">
+          <img id="toImage" src="images/Diamond.png" width="50">
+        </div>
+      </div>
+
+      <button onclick="convert()">Convert</button>
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Guardian Guild | Powered by Minecraft Legends
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>
